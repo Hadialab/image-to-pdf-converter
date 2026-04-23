@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image to PDF Converter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Image to PDF Converter</h1>
+      <p class="subtitle">Upload one or more images and convert them into one PDF.</p>
+
+      <div class="upload-box">
+        <label for="imageInput" class="upload-btn">Choose Images</label>
+        <input
+          type="file"
+          id="imageInput"
+          accept=".jpg,.jpeg,.png,image/jpeg,image/png"
+          multiple
+          hidden
+        />
+        <p id="fileInfo">No images selected</p>
+      </div>
+
+      <div id="fileList" class="file-list"></div>
+
+      <div class="form-group">
+        <label for="outputName">Output PDF Name</label>
+        <input type="text" id="outputName" placeholder="output.pdf" value="output.pdf" />
+      </div>
+
+      <div class="checkbox-row">
+        <input type="checkbox" id="landscapeInput" />
+        <label for="landscapeInput">Landscape mode</label>
+      </div>
+
+      <button id="convertBtn">Convert to PDF</button>
+
+      <p id="statusMessage" class="status-message"></p>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
